@@ -1,0 +1,15 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "nodersDB": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "noders",
+    "password": "",
+    "name": "nodersDB",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

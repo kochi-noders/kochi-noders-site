@@ -1,0 +1,84 @@
+<!-- Menu: Starts -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref='home'>knjs</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <!-- Menu Items: Start -->
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">Activities</a>
+            </li>
+            <li>
+                <a href="#">Archives</a>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Registration
+                            <span class="caret"></span>
+                        </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a ui-sref="location">Membership</a>
+                    </li>
+                    <li>
+                        <a ui-sref="speaker">Speaker</a>
+                    </li>
+                    <li>
+                        <a ui-sref="person">Venue</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Menu Items: End -->
+            <!-- Admin Menu: Start -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin
+                            <span class="caret"></span>
+                        </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a ui-sref="location">Roles</a>
+                    </li>
+                    <li>
+                        <a ui-sref="category">Members</a>
+                    </li>
+                    <li>
+                        <a ui-sref="person">Speaker</a>
+                    </li>
+                    <li>
+                        <a ui-sref="person">Venue</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Admin Menu: End -->
+            <li>
+                <a ui-sref="about-us">About Us</a>
+            </li>
+        </ul>
+        <!-- Login: Starts -->
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <!--  <button type="button" class="btn" ng-click="logout()">
+                        Log Out {{currentUser.name}}
+                    </button> -->
+                <a ui-sref="logout()">Log Out {{currentUser.name}}</a>
+            </li>
+            <li>
+                <a ui-sref="login">Login</a>
+            </li>
+            <li>
+                <a ui-sref="signup">Signup </a>
+            </li>
+        </ul>
+        <!-- Login: Ends -->
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+<!-- Menu: Ends -->
