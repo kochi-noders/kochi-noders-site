@@ -1,0 +1,15 @@
+{
+    "sessionType": [{
+        "name": "Talk"
+    }, {
+        "name": "Presentation"
+    }, {
+        "name": "Workshop"
+    }, {
+        "name": "Whiteboard"
+    }, {
+        "name": "Live coding"
+    }, {
+        "name": "Open discussion"
+    }]
+}

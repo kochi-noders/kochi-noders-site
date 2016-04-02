@@ -1,0 +1,66 @@
+{
+  "name": "member",
+  "base": "User",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "phone": {
+      "type": "string",
+      "required": true,
+      "comments": "Mobile phone number only"
+    },
+    "residingLocation": {
+      "type": "string",
+      "required": true,
+      "index": true,
+      "comments": "eg, Kadanvathra, Vytilla"
+    },
+    "rating": {
+      "type": "number",
+      "required": true,
+      "comments": "Rating defines the commitment of the member to the group."
+    },
+    "photo": {
+      "type": "object",
+      "comments": "Passport size photograph of the member"
+    },
+    "branch": {
+      "type": "string",
+      "required": true,
+      "comments": "Branch of the organization: Trivandrum, Kochi"
+    },
+    "company": {
+      "type": "string",
+      "required": true,
+      "comments": "if student then enter student"
+    },
+    "companyLoctation": {
+      "type": "string",
+      "required": true,
+      "index": true,
+      "comments": "eg, Infopark, Technopark, Incubation, Vytilla etc..."
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "stackoverflow": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

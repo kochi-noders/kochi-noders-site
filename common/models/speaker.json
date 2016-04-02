@@ -1,0 +1,78 @@
+{
+  "name": "speaker",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "designation": {
+      "type": "string"
+    },
+    "dateAlloted": {
+      "type": "date",
+      "comments": "Date allotted for the speaker. To be modified by Admin/Organizer."
+    },
+    "approvedOn": {
+      "type": "date",
+      "comments": "Approval date."
+    },
+    "company": {
+      "type": "string",
+      "id": false,
+      "required": true
+    },
+    "duration": {
+      "type": "number",
+      "required": true,
+      "comments": "Total duration in minutes."
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "comments": "Name of the speaker"
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "comments": "validate for mobile number."
+    },
+    "topic": {
+      "type": "string",
+      "required": true
+    },
+    "approvedBy": {
+      "type": "string",
+      "comments": "Automatically update when date is allotted."
+    },
+    "sessionType": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "comments": "Options to be selected from sessionType."
+    },
+    "socialProfile": {
+      "type": "string",
+      "required": false,
+      "comments": "Facebook, Linkedin urls."
+    },
+    "subTopic": {
+      "type": [
+        "string"
+      ],
+      "required": false,
+      "comments": "Split-up of topic. The contents that is covered in the session."
+    },
+    "audiencePreparation": {
+      "type": "string",
+      "required": false,
+      "comments": "Anything to prepare the audience."
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

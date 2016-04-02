@@ -1,0 +1,29 @@
+{
+  "name": "kochi-noders",
+  "description": "An application to manage member information about the members of Kochi Noders.",
+  "main": "server/server.js",
+  "authors": [
+    "Anoop.P.A <sripaanoop@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/kochi-noders/member-portal",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "angular-ui-router": "~0.2.17",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0",
+    "font-awesome": "~4.5.0",
+    "angular-resource": "~1.4.9",
+    "checklist-model": "~0.9.0",
+    "angular-ui-mask": "^1.7.2"
+  }
+}
