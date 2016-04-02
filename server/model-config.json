@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "nodersDB",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "nodersDB",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "nodersDB",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "nodersDB",
+    "public": false
+  },
+  "member": {
+    "dataSource": "nodersDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "speaker": {
+    "dataSource": "nodersDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "sessionType": {
+    "dataSource": "nodersDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  }
+}

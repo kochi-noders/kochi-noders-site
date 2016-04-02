@@ -1,0 +1,149 @@
+<form name="form" method="POST" role="form" ng-init="init()" novalidate>
+    <legend>Speaker Registraion Form</legend>
+    <!-- Row #1: Starts -->
+    <div class="row">
+        <!-- Name -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="form-group">
+                <label for="inputName" class="control-label">Name</label>
+                <div>
+                    <input type="text" name="name" id="inputName" class="form-control" placeholder="Name with initials last" ng-model="data.name" required>
+                </div>
+                <div class="alert alert-danger" ng-show="form.$submitted && form.name.$invalid">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Name</strong> is requried.
+                </div>
+            </div>
+        </div>
+        <!-- Company -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="form-group">
+                <label for="inputCompany" class=" control-label">Company</label>
+                <div>
+                    <input type="text" name="company" id="inputCompany" class="form-control" placeholder="Company" ng-model="data.company" required>
+                </div>
+                <div class="alert alert-danger" ng-show="form.$submitted && form.company.$invalid">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Company</strong> is requried.
+                </div>
+            </div>
+        </div>
+        <!-- Designation -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="form-group">
+                <label for="inputDesignation" class=" control-label">Designation:</label>
+                <div>
+                    <input type="text" name="designation" id="inputDesignation" class="form-control" placeholder="Designation" ng-model="data.designation" required>
+                </div>
+                <div class="alert alert-danger" ng-show="form.$submitted && form.designation.$invalid">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Designation</strong> is requried.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row #1: Ends -->
+    <!-- Row #2: Starts -->
+    <div class="row">
+        <!-- Mobile -->
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="form-group">
+                <label for="inputMobile" class=" control-label">Mobile:</label>
+                <div>
+                    <input type="text" name="mobile" id="inputMobile" class="form-control" ui-mask-placeholder ui-mask-placeholder-char=" " ng-model="data.phone" ui-mask="999-999-9999" required>
+                    <!-- ng-pattern="/^\+?\d{3}[- ]?\d{3}[- ]?\d{4}$/" -->
+                </div>
+                <div class="alert alert-danger" ng-show="form.$submitted && form.mobile.$invalid">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Mobile</strong> is requried and must have only ten numbers.
+                </div>
+            </div>
+        </div>
+        <!-- LinkedIn -->
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="form-group">
+                <label for="inputLinkedIn" class=" control-label">LinkedIn:</label>
+                <div>
+                    <input type="url" name="linkedIn" id="inputLinkedIn" class="form-control" placeholder="Members will endrose your expertise in social profiles" ng-model="data.socialProfile">
+                </div>
+                <div class="alert alert-danger" ng-show="form.$submitted && form.linkedIn.$error.url">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Social Reference</strong> Enter a valid URL.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row #2: Ends -->
+    <!-- Row #3: Starts -->
+    <div class="row">
+        <!-- Topic -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputTopic" class=" control-label">Topic:</label>
+                <div>
+                    <input type="text" name="topic" id="inputTopic" class="form-control" placeholder="Your mezmerising topic" ng-model="data.topic" required>
+                </div>
+                <div class="alert alert-danger" ng-show="form.$submitted && form.topic.$invalid">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Topic</strong> is requried.
+                </div>
+            </div>
+        </div>
+        <!-- Duration -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputDuration" class=" control-label">Duration:</label>
+                <div>
+                    <input type="number" name="duration" id="inputDuration" class="form-control" placeholder="Durnation in minitues" ng-model="data.duration" required ng-min="30" ng-max="90">
+                </div>
+                <div class="alert alert-danger" ng-show="form.$submitted && form.duration.$invalid">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Duration</strong> is requried and between 30 and 90 minitues.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row #3: Ends -->
+    <!-- Row #4: Starts -->
+    <!-- Sub-Topics -->
+    <!-- Session-Type -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="well well-sm">
+                <label class=" control-label">Session Type</label>
+                <label ng-repeat="s in sessionTypes" style=" display: block;">
+                    <input type="checkbox" checklist-model="data.sessionType" checklist-value="s.name"> {{s.name}}
+                </label>
+            </div>
+        </div>
+        <!-- 
+         -->
+        <!-- </div> -->
+        <!-- Row #4: Ends -->
+        <!-- Audience Preparation  -->
+        <!-- 
+        WATCH OUT CAREFULLY. PUT CONTROLS CROSS-ROWS
+         -->
+        <!-- <div class="row"> -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="textareaAudiencePreparation" class=" control-label">Do the audience has to prepare anything?</label>
+                <div>
+                    <textarea name="audiencePreparation" id="textareaAudiencePreparation" class="form-control" rows="6" placeholder="eg. Bring your laptops or steal from one sitting next to you..." ng-model="data.audiencePreparation"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="form.$valid && upsert()">
+        <i class="fa fa-floppy-o"></i> Submit
+    </button>
+    <button type="button" class="btn btn-warning" ng-click="form.$valid && upsert()" ng-disabled="true">
+        <i class="fa fa-check"></i> Verify
+    </button>
+    <button type="button" class="btn btn-success" ng-click="form.$valid && upsert()" ng-disabled="true">
+        <i class="fa fa-gavel"></i> Approve
+    </button>
+    <button type="button" class="btn btn-danger" ng-click="form.$valid && upsert()" ng-disabled="true">
+        <i class="fa fa-ban"></i> Delete
+    </button>
+</form>

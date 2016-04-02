@@ -1,0 +1,10 @@
+{
+    "db": {
+        "name": "db",
+        "connector": "memory"
+    },
+    "nodersDB": {
+        "url": "mongodb://paanoop:knjs123@ds049935.mongolab.com:49935/knjs",
+        "connector": "mongodb"
+    }
+}
