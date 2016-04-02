@@ -1,41 +1,22 @@
-## Home page
-* Introduction about the group.
-* Purpose and history so far.
-* Who should join this group. We don't teach, we share...this policy has to come here.
-* What we expect of the members.
+# Kochi Noders Web Application
 
-## Activities page
-Activities page shows recent most activities videos and photos. It also highlights the next event.
 
-## Archives page
-Shows media of past activities. Decide how to display them.
+## Pre-requisites
+* [node.js](https://nodejs.org/en/)
+* [git-flow](http://danielkummer.github.io/git-flow-cheatsheet/)
+* [strongloop](http://loopback.io/)
+* [bower](http://bower.io/)
 
-## Login page
-1. Login user
-1. Forgot password
+## Installation
+Clone the application into your local machine using the command:
 
-## Registration form page / Member profile page
-1. Will be referred as member profile in the website.
-1. Uploading of photo. Thumbnail size would be okay.
-1. Nobody, but the owner is able to alter the data. Not visible once the member is kicked-out by admin.
-1. Owner, can't delete the profile
+````git clone https://github.com/kochi-noders/kochi-noders-site.git -b develop````
+> The develop branch will have the latest code and not the master.
 
-## Members list page
-## Admin/Organizer page
-1. Setting Roles to members.
-1. Deleting members.
-1. Links to Speaker registration and Venue registration list.
+From the root of the project, run
 
-## Speaker registration form page 
-Todo:
-**Set status for speaker registration.**
+`npm install`
 
-1. New: When new registration is completed.
-1. Verified: Phone number, email and LinkedIn is verified by KNJS member.
-1. Approved: Committee members verify that this topic is not a repeat talk or irrelevant.
-1. Scheduled: Once approved it's scheduled for a date. It's also notified to members using Facebook and Meetup.
+## Starting
 
-## Speaker registration list page
-## Venue registration form page
-## Venue registration list page
-## About us
+`slc run`
