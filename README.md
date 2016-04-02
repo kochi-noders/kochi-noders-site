@@ -24,7 +24,6 @@ Shows media of past activities. Decide how to display them.
 ## Admin/Organizer page
 1. Setting Roles to members.
 1. Deleting members.
-1. Kick-out members. Another way of deleting. inspired by last meetup ;)
 1. Links to Speaker registration and Venue registration list.
 
 ## Speaker registration form page 
