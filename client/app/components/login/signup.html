@@ -1,0 +1,112 @@
+<!-- 
+| id                | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name              | varchar(512) | NO   |     | NULL    |                |
+| phone             | varchar(512) | NO   |     | NULL    |                |
+| email             | varchar(512) | NO   |     | NULL    |                |
+| company           | varchar(512) | NO   |     | NULL    |                |
+| residingLocation  | varchar(512) | NO   | MUL | NULL    |                |
+| password          | varchar(512) | NO   |     | NULL    |                |
+| rating            | int(11)      | NO   |     | NULL    |                |
+| branch            | varchar(512) | YES  |     | NULL    |                |
+| companyLoctation  | varchar(512) | YES  | MUL | NULL    |                |
+| facebook          | varchar(512) | YES  |     | NULL    |                |
+| linkedin          | varchar(512) | YES  |     | NULL    |                |
+| photo             | text         | YES  |     | NULL    |                |
+| stackoverflow     | varchar(512) | YES  |     | NULL    |                |
+| realm             | varchar(512) | YES  |     | NULL    |                |
+| username          | varchar(512) | YES  |     | NULL    |                |
+| credentials       | text         | YES  |     | NULL    |                |
+| challenges        | text         | YES  |     | NULL    |                |
+| emailVerified     | tinyint(1)   | YES  |     | NULL    |                |
+| verificationToken | varchar(512) | YES  |     | NULL    |                |
+| status            | varchar(512) | YES  |     | NULL    |                |
+| created           | datetime     | YES  |     | NULL    |                |
+| lastUpdated       | datetime     | YES  |     | NULL    |                | 
+-->
+<form name="form" method="POST" role="form" ng-init="init()" novalidate>
+    <legend>Membership Form</legend>
+    <section class="row">
+        <!-- Name -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputName" class="control-label">Name</label>
+                <input type="text" name="name" id="inputName" class="form-control" placeholder="Name with initials last seperated with space" ng-model="data.name" autofocus required>
+            </div>
+        </div>
+        <!-- Residense Loaction -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputCompanyLocation" class="control-label">Loaction</label>
+                <input type="text" name="company" id="inputCompanyLocation" class="form-control" placeholder="Where do you stay" ng-model="data.residingLocation" list="locationList">
+            </div>
+        </div>
+        <!-- Mobile -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputMobile" class=" control-label">Mobile</label>
+                <input type="text" name="mobile" id="inputMobile" class="form-control" ui-mask-placeholder ui-mask-placeholder-char=" " ng-model="data.phone" ui-mask="999-999-9999" required>
+            </div>
+        </div>
+        <!-- Email -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputEmail" class="control-label">Email</label>
+                <div>
+                    <input type="email" name="email" id="inputEmail" class="form-control" ng-model="data.email" required>
+                </div>
+            </div>
+        </div>
+        <!-- Company -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputCompany" class=" control-label">Company / Collage</label>
+                <input type="text" name="company" id="inputCompany" class="form-control" placeholder="Where you work or learn" ng-model="data.company" list="companyList" required>
+            </div>
+        </div>
+        <!-- Company Loaction -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputCompanyLocation" class="control-label">Company / Collage Loaction</label>
+                <input type="text" name="company" id="inputCompanyLocation" class="form-control" placeholder="Where is your company" ng-model="data.companyLoctation" list="locationList">
+            </div>
+        </div>
+        <!-- Username -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputUsername" class=" control-label">Username</label>
+                <div>
+                    <input type="text" name="username" id="inputUsername" class="form-control" ng-model="data.username" required>
+                </div>
+            </div>
+        </div>
+        <!-- Password -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label for="inputPassword" class=" control-label">Password</label>
+                <div>
+                    <input type="password" name="password" id="inputPassword" class="form-control" ng-model="data.password" required>
+                </div>
+            </div>
+        </div>
+        <!-- Datalist -->
+        <section>
+            <datalist id="locationList">
+                <option ng-repeat="l in locations">{{ l.location }}</option>
+            </datalist>
+            <datalist id="companyList">
+                <option ng-repeat="c in companies">{{ c.company }}</option>
+            </datalist>
+        </section>
+    </section>
+    <p>
+        <!-- Add a little space -->
+    </p>
+    <section class="text-left">
+        <button type="submit" class="btn btn-success" ng-click="form.$valid && save()">
+            <i class="fa fa-floppy-o"></i> Submit
+        </button>
+        <button type="reset" class="btn btn-danger">
+            <i class="fa fa-ban"></i> Reset
+        </button>
+    </section>
+</form>
