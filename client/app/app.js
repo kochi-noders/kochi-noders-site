@@ -9,6 +9,11 @@ angular
                     templateUrl: path + 'home/home.html',
                     controller: 'HomeCtrl'
                 })
+                .state('signup', {
+                    url: '/signup',
+                    templateUrl: path + 'login/signup.html',
+                    controller: 'SignupCtrl'
+                })
                 .state('speaker', {
                     url: '/speaker-registration',
                     templateUrl: path + 'speaker/speaker-registration.html',

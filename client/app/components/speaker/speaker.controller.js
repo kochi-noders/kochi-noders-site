@@ -39,7 +39,6 @@ angular
                     .then(function(result) {
                         $scope.data = {};
                         $state.go('home');
-                        $window.alert('Speaker registration complete.');
                     }, function(err) {
                         console.log('> error:', err);
                         $window.alert(err.data.error.name);
