@@ -41,6 +41,7 @@ angular
                         $state.go('home');
                         $window.alert('Speaker registration complete.');
                     }, function(err) {
+                        console.log('> error:', err);
                         $window.alert(err.data.error.name);
                         console.log('Error: %s\nDetails:%s', err.data.error.name, err.data.error.message);
                     })
